@@ -1,0 +1,39 @@
+# @API_HostAddress = http://localhost:5086
+
+# GET {{API_HostAddress}}/weatherforecast/
+# Accept: application/json
+
+###
+
+### Requisação para a raiz da aplicação
+GET http://localhost:5086
+
+### Listar produtos
+GET http://localhost:5086/api/produto/listar
+
+### Buscar produto
+GET http://localhost:5086/api/produto/buscar/deaa13e5-4d58-44bc-98c6-576f95893d18
+
+### Cadastrar produto
+POST http://localhost:5086/api/produto/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "Coca",
+    "preco" : 4.5,
+    "quantidade" : 153,
+    "descricao" : "Alimento"
+}
+
+### Deletar produto
+DELETE http://localhost:5086/api/produto/deletar/28c29fbe-599d-4723-bf73-e783b2911efc
+
+### Alterar produto
+PUT http://localhost:5086/api/produto/alterar/e6f1115d-d1b0-49ac-b245-2103f59cd190
+Content-Type: application/json
+
+{
+    "nome" : "Água",
+    "preco" : 4.5,
+    "quantidade" : 153
+}
